@@ -32,11 +32,29 @@ class auto :
             print ('Ya estoy usado')
         else:
             print ('Ya dejame descansar por favor !!!')
+    
+    @classmethod
+    def crearAuto (cls):
+        marca = 'TOYOTA'
+        modelo = 'HILUX'
+        anio = '2025'
+        return cls (marca,modelo,anio)
+    @staticmethod
+    def compararKilometraje(carro1,carro2):
+        if carro1.kilometraje == carro2.kilometraje: 
+            print ('Tienen el mismo kilometraje')
+        else:
+            print ('NO tienen el mismo kilometraje')
+    @staticmethod
+    def compararMarca (carro1,carro2):
+        if carro1.marca == carro2.marca:
+            print('SON DE LA MISMA MARCA')
+        else: 
+            print('NO SON DE LA MISMA MARCA ')
             
-
-auto_Jhonatan = auto('CHEVROLET','HI-RIDE','2025',10000)
-auto.mostrarInformacion(auto_Jhonatan)
-auto.actualizar_kilometraje(auto_Jhonatan,11000)
-auto.realizar_viaje(auto_Jhonatan,200)
-auto.estado_auto(auto_Jhonatan)
-
+    @staticmethod
+    def agregarUnaMarca(auto1,auto2,auto3):
+        if auto1.marca == 'FORD' and auto2.marca == 'FORD' and auto3.marca == 'FORD':
+            print ('SE AGREGARON LOS AUTOS')
+        else: 
+            print ('NO SE PUEDEN AGREGAR SON DE DIFERENTES MARCAS')

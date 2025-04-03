@@ -1,3 +1,8 @@
+import random
+
+
+
+
 class Laptop:
     def __init__(self,marca,procesador,memoria,costo = 500, impuesto = 10):
         self.marca = marca 
@@ -12,6 +17,14 @@ class Laptop:
     def valor_descuento (self,descuento):
         return(self.costo*descuento)/100
     
+    def realizar_diagnostico_sistema (self):
+        resultado = {
+            'MARCA': f'{self.marca}',
+            'PROCESADOR': f'{self.procesador}',
+            'MEMOPRIA RAM': 'OK' if self.memoria >= 8 else 'AUMENTAR MEMORIA RAM',
+            'BATERIA' : 'OK' if random.choice([True,False]) else  'CAMBIAR BATERIA'
+        }
+        return resultado
     
     @staticmethod
     def comparar_costo (laptop1,lapto2):
@@ -24,4 +37,6 @@ class Laptop:
         procesador = 'i5'
         memoria = 16
         return  cls (marca,procesador,memoria,costo)
+    
+    
         

@@ -48,7 +48,7 @@ class AppBuss :
         self.mostrar_laptos = tk.Text(self.root,height=10, width=50)
         self.mostrar_laptos.grid(row=7,column=1,columnspan=2)
         self.canva = tk.Canvas(self.root,width=200,height=200)
-        self.canva.grid(row=1,column=3,rowspan=7)  
+        self.canva.grid(row=1,column=3,rowspan=7)       
         
     def agregarLaptop(self):
         nuevaLapto = Lapto_Business (self.marca.get(),self.procesador.get(),self.espacioDisco.get(),

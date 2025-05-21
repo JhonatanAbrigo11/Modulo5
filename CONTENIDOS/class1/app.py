@@ -62,7 +62,6 @@ class App :
         self.canva.create_image(0,0,anchor= tk.NW,image= photo)
         self.canva.image = photo
         
-        
         pass
      
     
